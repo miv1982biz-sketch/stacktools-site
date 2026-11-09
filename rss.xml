@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Stack Tools Lab</title>
+    <link>https://stacktools.globe-ent.com/</link>
+    <description>SaaS pricing and terms, checked against the official pages.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <item>
+      <title>Kit vs beehiiv vs Systeme.io: free plans, prices and limits from the official pages</title>
+      <link>https://stacktools.globe-ent.com/articles/kit-vs-beehiiv-vs-systeme-io.html</link>
+      <guid>https://stacktools.globe-ent.com/articles/kit-vs-beehiiv-vs-systeme-io.html</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
+      <description>The three free-plan ceilings — 10,000, 2,500, 2,000 — look like a ranking until you read what each vendor counts. First paid steps, selling fees and tier rules, checked November 9, 2026.</description>
+    </item>
+    <item>
+      <title>What Systeme.io's free plan actually includes: every published limit, checked</title>
+      <link>https://stacktools.globe-ent.com/articles/systeme-io-free-plan.html</link>
+      <guid>https://stacktools.globe-ent.com/articles/systeme-io-free-plan.html</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
+      <description>2,000 contacts, 3 funnels, 1 course, 1 automation rule — and the documented warnings and restrictions when you pass a limit.</description>
+    </item>
+    <item>
+      <title>How to choose a newsletter platform: a 7-point check of the published terms</title>
+      <link>https://stacktools.globe-ent.com/articles/how-to-choose-a-newsletter-platform.html</link>
+      <guid>https://stacktools.globe-ent.com/articles/how-to-choose-a-newsletter-platform.html</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
+      <description>The seven things to verify on a vendor's own pages — counting rule, free ceiling, send limits, first paid step, selling fees, over-limit behavior, trial terms.</description>
+    </item>
+  </channel>
+</rss>

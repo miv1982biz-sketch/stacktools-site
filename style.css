@@ -1,0 +1,101 @@
+/* Stack Tools Lab — DESIGN v1 (2026-11-09)
+   "Spec sheet / lab notebook": warm paper, black rules, three typefaces with fixed roles.
+   Headings = Newsreader (serif), body = Inter, figures & labels = IBM Plex Mono (tabular).
+   One accent only: lab blue #2B50C8, used for checked stamps and badges.
+   No rounded cards, no soft shadows, no gradients. */
+:root {
+  --ink:#1e232b; --sub:#5c6370; --line:#e0dacb; --line-dark:#1e232b;
+  --paper:#f6f4ee; --row:#fffdf8; --th:#efe9db;
+  --accent:#2b50c8; --accent-soft:#e9eefc;
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Inter", "Helvetica Neue", Arial, sans-serif; color:var(--ink); background:var(--paper); line-height:1.75; font-size:16px; -webkit-font-smoothing:antialiased; }
+::selection { background:var(--accent-soft); }
+
+/* Header */
+header.site { position:sticky; top:0; z-index:10; background:var(--row); border-bottom:2px solid var(--line-dark); padding:12px 20px; }
+header.site .name { font-family:"Newsreader", Georgia, serif; font-size:23px; font-weight:700; letter-spacing:.01em; }
+header.site .name a { color:inherit; text-decoration:none; display:inline-block; padding:6px 0; }
+header.site .name a::before { content:""; display:inline-block; width:11px; height:11px; background:var(--accent); margin-right:9px; }
+header.site .tag { color:var(--sub); font-size:13px; }
+nav.main { margin-top:6px; font-size:14.5px; }
+nav.main a { margin-right:18px; color:var(--ink); text-decoration:underline; text-underline-offset:3px; font-weight:700; display:inline-block; padding:10px 2px; }
+
+/* Body column */
+main { max-width:780px; margin:0 auto; padding:28px 24px 56px; background:var(--row); border-left:1px solid var(--line); border-right:1px solid var(--line); }
+h1 { font-family:"Newsreader", Georgia, serif; font-size:27px; line-height:1.4; margin:10px 0 14px; font-weight:700; }
+h2 { font-family:"Newsreader", Georgia, serif; font-size:21px; border-bottom:2px solid var(--line-dark); padding-bottom:6px; margin-top:42px; line-height:1.45; }
+h2::before { content:""; display:inline-block; width:9px; height:9px; background:var(--accent); margin-right:9px; vertical-align:2px; }
+h3 { font-size:16.5px; margin-top:26px; }
+p, li { font-size:16px; }
+a { color:var(--ink); text-decoration:underline; text-underline-offset:2px; }
+.num, td.n, .sv { font-family:"IBM Plex Mono", "SFMono-Regular", Consolas, monospace; font-variant-numeric:tabular-nums; font-feature-settings:"tnum"; }
+
+/* Dateline (published / updated / facts checked) */
+.dateline { font-family:"IBM Plex Mono", Consolas, monospace; font-size:12.5px; color:var(--sub); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:7px 0; margin:14px 0; }
+
+/* Lead */
+.leadline { font-family:"Newsreader", Georgia, serif; font-size:24px; font-weight:700; line-height:1.5; margin:6px 0 4px; }
+.leadsub { color:var(--sub); margin:0 0 6px; }
+
+/* Spec sheet (label + value rows) */
+.sheet { border:1.5px solid var(--line-dark); margin:16px 0 8px; background:var(--row); }
+.srow { display:flex; justify-content:space-between; align-items:baseline; gap:18px; padding:11px 14px; border-bottom:1px solid var(--line); }
+.srow:last-child { border-bottom:none; }
+.srow .sk { font-size:13.5px; font-weight:700; }
+.srow .sv { font-size:17px; font-weight:700; text-align:right; white-space:nowrap; }
+.badge { display:inline-block; font-family:"IBM Plex Mono", Consolas, monospace; background:var(--accent); color:#fff; font-size:11px; font-weight:700; padding:2px 8px; margin-right:8px; vertical-align:3px; letter-spacing:.06em; }
+.stamp { display:inline-block; font-family:"IBM Plex Mono", Consolas, monospace; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--accent); border:1.5px solid var(--accent); padding:2px 8px; }
+figure { margin:18px 0; }
+figcaption, .figcap { font-size:12.5px; color:var(--sub); padding:7px 2px; }
+
+/* Breadcrumb */
+.crumb { font-size:13px; color:var(--sub); margin:0 0 6px; }
+.crumb a { color:var(--sub); text-decoration:none; }
+.crumb a:hover { text-decoration:underline; }
+
+/* Disclosure box */
+.disclosure { background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--accent); padding:10px 14px; font-size:13px; color:var(--ink); margin:16px 0; }
+
+/* Ruled rows / cards (no radius, no shadow) */
+.card { display:block; border:none; border-top:1px solid var(--line); padding:14px 2px; margin:0; background:transparent; text-decoration:none; color:inherit; }
+.card .t { font-weight:700; font-size:16px; color:var(--ink); display:block; margin-bottom:4px; }
+.card .d { color:var(--sub); font-size:14px; display:block; }
+
+/* Tables (published specs) */
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14.5px; border:1.5px solid var(--line-dark); background:var(--row); }
+th, td { border-bottom:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+tr:last-child td, tr:last-child th { border-bottom:none; }
+th { background:var(--th); font-weight:700; }
+table.spec td { font-variant-numeric:tabular-nums; }
+.src { font-size:13px; color:var(--sub); }
+
+/* Article list rows */
+.thumbrow { display:flex; gap:14px; padding:13px 0; border-bottom:1px solid var(--line); align-items:flex-start; text-decoration:none; color:inherit; }
+a.thumbrow:hover .t { text-decoration:underline; }
+.thumbrow .t { font-weight:700; font-size:15.5px; display:block; }
+.thumbrow .d { font-size:13px; color:var(--sub); display:block; }
+
+/* Search (articles page) */
+.searchbox { margin:16px 0; }
+.searchbox input { width:100%; padding:12px 14px; font-size:16px; border:1.5px solid var(--line-dark); background:var(--row); font-family:inherit; }
+.searchbox input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+
+/* Share row */
+.share { margin:28px 0 8px; padding:12px 0; border-top:1px solid var(--line); font-size:14px; }
+.share a { margin-right:14px; }
+
+/* Footer */
+footer.site { border-top:2px solid var(--line-dark); padding:24px 20px 30px; font-size:13px; color:var(--sub); text-align:center; background:var(--row); }
+footer.site a { color:var(--sub); margin:0 9px; }
+footer.site div { margin-top:10px; }
+footer.site .sister { margin-top:10px; font-size:13px; }
+
+@media (max-width:640px) {
+  table { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .leadline { font-size:21px; }
+  h1 { font-size:24px; }
+  main { border-left:none; border-right:none; padding:24px 18px 48px; }
+  .srow { flex-direction:column; gap:2px; }
+  .srow .sv { text-align:left; }
+}
